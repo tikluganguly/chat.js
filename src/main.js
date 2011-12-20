@@ -1,4 +1,8 @@
 var http = require('http');
+var io = require('socket.io');
+
+io.listen(http);
+
 http.createServer(function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/plain'});
   res.end('Chat.js Server ready for interaction\n');
